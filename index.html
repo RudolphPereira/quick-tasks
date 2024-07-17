@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Quick Tasks</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="todo__app">
+        <div class="todo__nav">
+          <h1>Quick Tasks</h1>
+        </div>
+
+        <form class="todo__form">
+          <div class="todo__actions">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Add tasks here"
+            />
+            <button class="form__btn">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <button class="form__btn resetBtn">
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+            </button>
+          </div>
+          <select class="form__filer" autocomplete="off">
+            <option value="all" class="form__option all">All</option>
+            <option value="completed" class="form__option">Completed</option>
+            <option value="pending" class="form__option">Pending</option>
+            <option value="deleted" class="form__option">Deleted</option>
+          </select>
+        </form>
+
+        <div class="todo__pomo">
+          <div class="lists">
+            <ul class="todo__list"></ul>
+            <ul class="deleted__list"></ul>
+          </div>
+
+          <div class="pomo">
+            <div class="pomo__title">
+              <h2 class="title">Time to focus!</h2>
+              <!-- <h2 class="hide">Go ahead Relax!</h2>
+                      <h2 class="hide">Good Job, you deserve it!</h2> -->
+            </div>
+            <div class="pomo_app">
+              <div class="timer">
+                <span class="min">00</span>:<span class="sec">00</span>
+              </div>
+              <div class="cycles">
+                <div class="progressBar">
+                  <span></span>
+                </div>
+                <p><span class="number">1</span>/4</p>
+              </div>
+              <div class="tasks">
+                <p>Task Name</p>
+              </div>
+              <div class="pomo_btns">
+                <button class="start play">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+                <button class="pause">
+                  <i class="fa-solid fa-pause"></i>
+                </button>
+                <button class="stop"><i class="fa-solid fa-stop"></i></button>
+                <button class="setting">
+                  <i class="fa-solid fa-gear"></i>
+                </button>
+              </div>
+            </div>
+
+            <form class="timer_inputs">
+              <div class="inputs">
+                <div class="min">
+                  <label for="work" class="timer_input_label"
+                    >Work Timer
+                  </label>
+                  <input
+                    type="number"
+                    class="work"
+                    required
+                    placeholder="Add Minutes "
+                  />
+                </div>
+
+                <div class="min">
+                  <label for="short-break" class="timer_input_label"
+                    >Short Break</label
+                  >
+                  <input
+                    type="number"
+                    class="short-break"
+                    required
+                    placeholder="Add Minutes "
+                  />
+                </div>
+
+                <div class="min">
+                  <label for="long-break" class="timer_input_label"
+                    >Long Break</label
+                  >
+                  <input
+                    type="number"
+                    class="long-break"
+                    required
+                    placeholder="Add Minutes "
+                  />
+                </div>
+              </div>
+
+              <div class="timer_btns">
+                <button type="button" class="form-cancel">Cancel</button>
+                <button type="button" class="form-submit done">Okay</button>
+              </div>
+            </form>
+
+            <div class="pomo_close">
+              <button class="setting">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="pomo_message">
+              <h2 class="message">Has the task been completed?</h2>
+              <div class="pomo_message_action_btns">
+                <button class="pomo_action_no">No</button>
+                <button class="pomo_action_yes done">Yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
